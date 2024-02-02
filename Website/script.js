@@ -72,6 +72,10 @@ const config = {
     type: 'bar',
     data: data,
     options: {
+        animation: {
+            duration: 1000, // Animation duration in milliseconds
+            easing: 'easeInOutQuad' // Easing function for the animation
+        },
         plugins: {
             title: {
                 display: true,
