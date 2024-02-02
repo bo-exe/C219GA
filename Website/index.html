@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boyang's Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+        <header>
+            <img src="images/library_logo.png" alt="Library Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#books"><i class="bi bi-house"></i> Books</a></li>
+                    <li><a href="#stats"><i class="bi bi-bar-chart"></i> Stats</a></li>
+                    <li><a href="#inventory"><i class="bi bi-table"></i> Inventory</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search books...">
+            <i class="bi bi-search"></i>
+        </div>  
+        <div class="section" id="books">
+            <div class="card-container mt-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="images/gstilton1.jpeg" alt="card1" data-bs-toggle="modal" data-bs-target="#card1modal" id="cardimages">
+                            <h3>Geronimo Stilton: Have A Heart, Geronimo</h3>
+                            <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card1Modal">
+                                <i class="bi bi-person"></i> Elisabetta Maria Dami
+                            </div>
+                            <button class="button" onclick="disableButton(this)">Reserve</button>
+                        </div>
+                    </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/gstilton2.jpeg" alt="card2" data-bs-toggle="modal" data-bs-target="#card2modal" id="cardimages">
+                    <h3>Geronimo Stilton: The Golden Key <span style="color:white;">SPACE FILLER</span></h3>
+                    <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card2modal">
+                        <i class="bi bi-person"></i> Elisabetta Maria Dami
+                    </div>
+                    <button class="button" onclick="disableButton(this)">Reserve</button>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/gstilton3.jpeg" alt="card3" data-bs-toggle="modal" data-bs-target="#card3modal" id="cardimages">
+                    <h3>Geronimo Stilton: The Super Cup Face-Off</h3>
+                    <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card3modal">
+                        <i class="bi bi-person"></i> Elisabetta Maria Dami
+                    </div>
+                    <button class="button" onclick="disableButton(this)">Reserve</button>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/gstilton4.jpeg" alt="card4" data-bs-toggle="modal" data-bs-target="#card4modal" id="cardimages">
+                    <h3>Geronimo Stilton: Out Of Time</h3>
+                    <br>
+                    <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card4modal">
+                        <i class="bi bi-person"></i> Elisabetta Maria Dami
+                    </div>
+                    <button class="button" onclick="disableButton(this)">Reserve</button>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/gstilton5.jpeg" alt="card5" data-bs-toggle="modal" data-bs-target="#card5modal" id="cardimages">
+                    <h3>Geronimo Stilton: Garbage Dump Disaster</h3>
+                    <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card5modal">
+                        <i class="bi bi-person"></i> Elisabetta Maria Dami
+                    </div>
+                    <button class="button" onclick="disableButton(this)">Reserve</button>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/gstilton6.jpeg" alt="card6" data-bs-toggle="modal" data-bs-target="#card6modal" id="cardimages">
+                    <h3>Geronimo Stilton: Mysterious Eye Of The Dragon</h3>
+                    <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card6modal">
+                        <i class="bi bi-person"></i> Elisabetta Maria Dami
+                    </div>
+                    <button class="button" onclick="disableButton(this)">Reserve</button>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="images/gstilton7.jpeg" alt="card7" data-bs-toggle="modal" data-bs-target="#card7modal" id="cardimages">
+                    <h3>Geronimo Stilton: Very Merry Christmas</h3>
+                    <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card7modal">
+                        <i class="bi bi-person"></i> Elisabetta Maria Dami
+                    </div>
+                    <button class="button" onclick="disableButton(this)">Reserve</button>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                        <img src="images/gstilton8.jpeg" alt="card8" data-bs-toggle="modal" data-bs-target="#card8modal" id="cardimages">
+                        <h3>Geronimo Stilton: The Race Across America</h3>
+                        <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card8modal">
+                            <i class="bi bi-person"></i> Elisabetta Maria Dami
+                        </div>
+                        <button class="button" onclick="disableButton(this)">Reserve</button>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/gstilton9.jpeg" alt="card9" data-bs-toggle="modal" data-bs-target="#card9modal" id="cardimages">
+                        <h3>Geronimo Stilton Reporter: Hypno-Tick Tock</h3>
+                        <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card9modal">
+                            <i class="bi bi-person"></i> Elisabetta Maria Dami
+                        </div>
+                        <button class="button" onclick="disableButton(this)">Reserve</button>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/gstilton10.jpeg" alt="card10" data-bs-toggle="modal" data-bs-target="#card10modal" id="cardimages">
+                        <h3>Geronimo Stilton: The Keepers Of The Empire</h3>
+                        <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card10modal">
+                            <i class="bi bi-person"></i> Elisabetta Maria Dami
+                        </div>
+                        <button class="button" onclick="disableButton(this)">Reserve</button>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/gstilton11.jpeg" alt="card11" data-bs-toggle="modal" data-bs-target="#card11modal" id="cardimages">
+                        <h3>Geronimo Stilton: The Way Of The Samurai</h3>
+                        <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card11modal">
+                            <i class="bi bi-person"></i> Elisabetta Maria Dami
+                        </div>
+                        <button class="button" onclick="disableButton(this)">Reserve</button>
+                    </div>
+                    </div>
+
+                    <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/gstilton12.jpeg" alt="card12" data-bs-toggle="modal" data-bs-target="#card12modal" id="cardimages">
+                        <h3>Geronimo Stilton: The Enormouse Pearl Heist</h3>
+                        <div class="card-footer" data-bs-toggle="modal" data-bs-target="#card12modal">
+                            <i class="bi bi-person"></i> Elisabetta Maria Dami
+                        </div>
+                        <button class="button" onclick="disableButton(this)">Reserve</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="card1modal" tabindex="-1" aria-labelledby="card1modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card1modal">Geronimo Stilton: Have A Heart, Geronimo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton1.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "Have a Heart, Geronimo," join Geronimo Stilton as he discovers the true meaning of compassion and kindness. When a heartwarming mission arises, Geronimo and his friends embark on a heartfelt journey filled with empathy, friendship, and the power of giving. Get ready for an uplifting adventure that will touch your heart!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card2modal" tabindex="-1" aria-labelledby="card2modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card2modal">Geronimo Stilton: The Golden Key</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton2.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "The Golden Key," Geronimo Stilton embarks on a captivating quest to unlock the secrets of a mysterious artifact. Join him as he journeys through perilous landscapes and encounters intriguing characters in a race against time. Will Geronimo discover the truth behind the legendary Golden Key?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card3modal" tabindex="-1" aria-labelledby="card3modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card3modal">Geronimo Stilton: The Super Cup Face-Off</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton3.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "The Super Cup Face-Off," Geronimo Stilton takes on the ultimate challenge in a high-stakes sports showdown! Join him as he teams up with friends to compete for the coveted Super Cup trophy. With thrilling matches and unexpected twists, this action-packed adventure will keep readers on the edge of their seats until the final whistle blows!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card4modal" tabindex="-1" aria-labelledby="card4modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card4modal">Geronimo Stilton: Out Of Time</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton4.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "Out of Time," Geronimo Stilton races against the clock in a thrilling time-travel adventure! When a mysterious device sends him spiraling through history, Geronimo must navigate past perils and future uncertainties to restore the timeline. Join him on a whirlwind quest through the ages!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card5modal" tabindex="-1" aria-labelledby="card5modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card5modal">Geronimo Stilton: Garbage Dump Disaster</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton5.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "Garbage Dump Disaster," Geronimo Stilton finds himself knee-deep in a stinky mystery! When the town's garbage dump becomes a scene of chaos, it's up to Geronimo to sniff out the truth. Join him on a hilarious adventure as he unravels clues and tackles trashy troubles.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card6modal" tabindex="-1" aria-labelledby="card6modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card6modal">Geronimo Stilton: Mysterious Eye Of The Dragon</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton6.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>Embark on a daring adventure with Geronimo Stilton in "Mysterious Eye of the Dragon"! Join him as he unravels the secrets of an ancient artifact, facing perilous challenges and cunning adversaries along the way. Will Geronimo unlock the truth behind the mystical Eye of the Dragon in this thrilling quest?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card7modal" tabindex="-1" aria-labelledby="card7modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card7modal">Geronimo Stilton: Very Merry Christmas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton7.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>Celebrate the holiday season with Geronimo Stilton in "Very Merry Christmas"! Join him as he spreads joy and cheer, embarking on heartwarming adventures filled with festive spirit. With laughter, surprises, and friendship, Geronimo's Christmas tale is sure to warm the hearts of readers young and old.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card8modal" tabindex="-1" aria-labelledby="card8modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card8modal">Geronimo Stilton: The Race Across America</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton8.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>Join Geronimo Stilton in "The Race Across America" as he embarks on a whirlwind adventure across the nation. With fast-paced action and unexpected challenges, Geronimo races against time to win the ultimate competition. Will he conquer the obstacles and emerge victorious in this thrilling race of a lifetime?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card9modal" tabindex="-1" aria-labelledby="card9modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card9modal">Geronimo Stilton Reporter: Hypno-Tick Tock</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton9.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "Hypno-Tick Tock," Geronimo Stilton Reporter dives into a mind-bending mystery involving a hypnotic clock. With time ticking away, Geronimo must unravel clues and face mesmerizing challenges to save the day. Join him on a thrilling journey of wit and suspense in this pulse-pounding adventure!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card10modal" tabindex="-1" aria-labelledby="card10modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card10modal">Geronimo Stilton: The Keepers Of The Empire</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                            <div class="modal-body text-center">
+                                <img src="images/gstilton10.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>In "The Keepers of the Empire," Geronimo Stilton takes readers on a riveting quest to safeguard an ancient empire's secrets. Facing perilous challenges and cunning adversaries, Geronimo races against time to protect the empire's legacy. Will he succeed in this electrifying adventure of courage and cunning?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card11modal" tabindex="-1" aria-labelledby="card11modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card11modal">Geronimo Stilton: The Way Of The Samurai</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton11.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>Embark on an epic journey with Geronimo Stilton in "The Way of the Samurai"! Join him as he explores ancient Japan, unraveling mysteries and facing challenges alongside courageous samurai warriors. With danger lurking at every corner, will Geronimo emerge victorious in this thrilling adventure?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card12modal" tabindex="-1" aria-labelledby="card12modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="card12modal">Geronimo Stilton: The Enormouse Pearl Heist</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="images/gstilton12.jpeg" class="img-fluid mx-auto d-block" alt="Book Image">
+                            <br>
+                            <p>Join Geronimo Stilton in "The Enormouse Pearl Heist" as he races against time to recover a priceless pearl. With cunning adversaries and hidden secrets, Geronimo navigates through twists and turns in this action-packed adventure. Will he solve the mystery before it's too late?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+    </div>
+    <div class="section" id="stats">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="section" id="inventory">
+        <table id="table"></table>
+    </div>
+
+    <div class="section-footer" id="contact">
+        <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <h4>Contact Information</h4>
+                  <p>Email: 22020749@myrp.edu.sg</p>
+                  <p>Phone: +65 8862 8363</p>
+                  <p>Address: Marsiling Rise Blk 120, #02-56</p>
+                </div>
+          
+                <div class="col-md-4">
+                  <h4>Connect with Us</h4>
+                  <ul class="social-links">
+                    <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook" id="social-icons"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter" id="social-icons"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram" id="social-icons"></i></a>
+                  </ul>
+                </div>
+          
+                <div class="col-md-4">
+                  <h4>Site Map</h4>
+                  <ul class="site-map">
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#inventory">Inventory</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </footer>
+    </div>
+      
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script> 
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+                        
+</body>
+</html>                    
+
